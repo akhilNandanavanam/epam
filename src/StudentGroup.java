@@ -49,7 +49,20 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
+        try
+        {
+            if(student==null)
+            {
+                throw new IllegalArgumentException();
+            }
 
+
+
+
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
         this.students = new Student[0];
 	    for(int i=0;i<students.length;i++)
 		{
@@ -68,7 +81,20 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		try
+        {
+            if(student==null)
+            {
+                throw new IllegalArgumentException();
+            }
 
+
+
+
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
         this.students = new Student[students.length+1];
 
 		students[students.length+1]=student;
@@ -77,7 +103,18 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		try{
+			if(index<0 || index>students.length){
+				throw new IllegalArgumentException();
+		}
 
+
+
+		}
+			catch(Exception e)
+			{
+                System.out.println(e);
+			}
 			for(int i=0;i<students.length;i++)
 		{
 			students[i]=students[i+1];
@@ -89,7 +126,17 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
 
+
+		}
+			catch(Exception e)
+			{
+                System.out.println(e);
+			}
 			for(int i=index;i<students.length;i++)
 		{
 			students[i]=students[i+1];
@@ -106,7 +153,18 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromIndex(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
 
+
+
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 			for(int i=index+1;i<=students.length;i++)
 		{
 			students[i]=null;
@@ -117,7 +175,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeFromElement(Student student) {
 	    int i;
+	    try{
+			if(student==null){
+				throw new IllegalArgumentException();
+		}
+	    }
 
+
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 			for(i=0;i<students.length;i++)
 		{
 			if(students[i]==student)
@@ -135,7 +203,18 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToIndex(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
 
+
+
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 			for(int i=0;i<=index;i++)
 		{
 			students[i]=students[index+1];
@@ -147,7 +226,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void removeToElement(Student student) {
 	   int p=0;
+	    try{
+			if(student==null){
+				throw new IllegalArgumentException();
+		}
 
+
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 			for(int i=0;i<students.length;i++)
 		{
 			if(students[i]==student)
