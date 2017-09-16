@@ -49,6 +49,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
+
 	    this.students = new Student[0];
 	    for(int i=0;i<students.length;i++)
 		{
