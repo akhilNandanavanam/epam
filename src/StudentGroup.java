@@ -56,7 +56,7 @@ public class StudentGroup implements StudentArrayOperation {
                 throw new IllegalArgumentException();
             }
 
-        else{
+
 	    this.students = new Student[0];
 	    for(int i=0;i<students.length;i++)
 		{
@@ -64,7 +64,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 		}
 		students[0]=student;
-		}
+
         }
         catch(Exception e){
             System.out.println(e);
@@ -87,11 +87,11 @@ public class StudentGroup implements StudentArrayOperation {
                 throw new IllegalArgumentException();
             }
 
-        else{
+
 	    this.students = new Student[students.length+1];
 
 		students[students.length+1]=student;
-		}
+
         }
         catch(Exception e){
             System.out.println(e);
@@ -105,7 +105,7 @@ public class StudentGroup implements StudentArrayOperation {
 			if(index<0 || index>students.length){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 
 		for(int i=0;i<students.length;i++)
 		{
@@ -113,7 +113,7 @@ public class StudentGroup implements StudentArrayOperation {
         }
 		this.students = new Student[index];
 		students[index]=student;
-		}
+
 		}
 			catch(Exception e)
 			{
@@ -127,11 +127,11 @@ public class StudentGroup implements StudentArrayOperation {
 			if(index<0|| index>students.length){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 		for(int i=index;i<students.length;i++)
 		{
 			students[i]=students[i+1];
-		}
+
 		}
 		}
 			catch(Exception e)
@@ -153,12 +153,12 @@ public class StudentGroup implements StudentArrayOperation {
 			if(index<0|| index>students.length){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 		for(int i=index+1;i<=students.length;i++)
 		{
 			students[i]=null;
 		}
-		}
+
 		}
 			catch(Exception e)
 			{
@@ -174,7 +174,7 @@ public class StudentGroup implements StudentArrayOperation {
 			if(student==null){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 		for(i=0;i<students.length;i++)
 		{
 			if(students[i]==student)
@@ -184,7 +184,7 @@ public class StudentGroup implements StudentArrayOperation {
 		{
 			students[i]=students[i+1];
 		}
-		}
+
 		}
 			catch(Exception e)
 			{
@@ -200,13 +200,13 @@ public class StudentGroup implements StudentArrayOperation {
 			if(index<0|| index>students.length){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 		for(int i=0;i<=index;i++)
 		{
 			students[i]=students[index+1];
 
 		}
-		}
+
 		}
 			catch(Exception e)
 			{
@@ -222,7 +222,7 @@ public class StudentGroup implements StudentArrayOperation {
 			if(student==null){
 				throw new IllegalArgumentException();
 		}
-		else{
+
 		for(int i=0;i<students.length;i++)
 		{
 			if(students[i]==student)
@@ -237,7 +237,7 @@ public class StudentGroup implements StudentArrayOperation {
 			students[i]=students[p+1];
 
 		}
-		}
+
 		}
 			catch(Exception e)
 			{
