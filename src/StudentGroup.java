@@ -47,7 +47,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		if(index < 0 || index >= students.length)
+		if(index < 0||index >= students.length)
             throw new IllegalArgumentException();
 		else
             return students[index];
@@ -56,7 +56,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(index < 0 || index >= students.length)
+		if(index < 0||index >= students.length)
             throw new IllegalArgumentException();
 		else {
 			students[index] = student;
@@ -221,7 +221,8 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student getNextStudent(Student student) {
 
 		// Add your implementation here
-		if (student == null) throw new IllegalArgumentException();
+		if (student == null)
+            throw new IllegalArgumentException();
 		else
 		for(int i=0;i<students.length;i++) {
 			if(student.getId() == students[i].getId()) return students[i+1];
