@@ -79,6 +79,21 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void addLast(Student student) {
 		// Add your implementation here
+		try
+        {
+            if(student==null)
+            {
+                throw new IllegalArgumentException();
+            }
+
+        else{
+	    this.students = new Student[students.length+1];
+
+		students[students.length+1]=student;
+		}
+        }
+        catch(Exception e){
+        }
 	}
 
 	@Override
