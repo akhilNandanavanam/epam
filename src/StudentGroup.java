@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.*;
 
 /**
  * A fix-sized array of students
@@ -37,18 +38,30 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		return null;
+		return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
+
 		// Add your implementation here
 	}
 
 	@Override
 	public void addFirst(Student student) {
+	    this.students = new Student[0];
+	    for(int i=0;i<students.length;i++)
+		{
+			students[i+1]=students[i];
+
+		}
+		students[0]=student;
+		}
+
 		// Add your implementation here
-	}
+
+
+
 
 	@Override
 	public void addLast(Student student) {
