@@ -1,7 +1,9 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Date;
+import java.util.Collections;
+import java.util.Arrays;
+
+
 
 /**
  * A fix-sized array of students
@@ -45,14 +47,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
-		if(index < 0 || index >= students.length) throw new IllegalArgumentException();
-		else return students[index];
+		if(index < 0 || index >= students.length)
+            throw new IllegalArgumentException();
+		else
+            return students[index];
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
-		if(index < 0 || index >= students.length) throw new IllegalArgumentException();
+		if(index < 0 || index >= students.length)
+            throw new IllegalArgumentException();
 		else {
 			students[index] = student;
 		}
@@ -62,13 +67,14 @@ public class StudentGroup implements StudentArrayOperation {
 	public void addFirst(Student student) {
 		// Add your implementation here
 
-		if (student == null ) throw new IllegalArgumentException();
+		if (student == null )
+            throw new IllegalArgumentException();
 		else {
-			ArrayList <Student>at = new ArrayList<Student>();
-			at = (ArrayList<Student>) Arrays.asList(students);
-			at.add(0, student);
+			ArrayList <Student>pl = new ArrayList<Student>();
+			pl = (ArrayList<Student>) Arrays.asList(students);
+			pl.add(0, student);
 			students = null;
-			students = (Student[]) at.toArray();
+			students = (Student[]) pl.toArray();
 
 
 		}
@@ -80,11 +86,11 @@ public class StudentGroup implements StudentArrayOperation {
 
 		if (student == null ) throw new IllegalArgumentException();
 		else {
-			ArrayList <Student>at = new ArrayList<Student>();
-			at = (ArrayList<Student>) Arrays.asList(students);
-			at.add(students.length, student);
+			ArrayList <Student>pl = new ArrayList<Student>();
+			pl = (ArrayList<Student>) Arrays.asList(students);
+			pl.add(students.length, student);
 			students = null;
-			students = (Student[]) at.toArray();
+			students = (Student[]) pl.toArray();
 		}
 
 	}
@@ -94,11 +100,11 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 	if (student == null ) throw new IllegalArgumentException();
 		else {
-			ArrayList <Student>at = new ArrayList<Student>();
-			at = (ArrayList<Student>) Arrays.asList(students);
-			at.add(index, student);
+			ArrayList <Student>pl = new ArrayList<Student>();
+			pl = (ArrayList<Student>) Arrays.asList(students);
+			pl.add(index, student);
 			students = null;
-			students = (Student[]) at.toArray();
+			students = (Student[]) pl.toArray();
 
 		}
 
@@ -109,6 +115,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) {
 		// Add your implementation here
+
 	}
 
 	@Override
@@ -199,12 +206,12 @@ public class StudentGroup implements StudentArrayOperation {
 			}
 		}
 		Student []st = new Student[students.length];
-		int count=0;
+		int c=0;
 		for(int i=0;i<students.length;i++) {
-			if(d == students[i].getAvgMark()) {st[count] = students[i]; count++;}
+			if(d == students[i].getAvgMark()) {st[c] = students[i]; c++;}
 		}
-		Student []ts = new Student[count];
-		for(int i=0;i<count;i++) {
+		Student []ts = new Student[c];
+		for(int i=0;i<c;i++) {
 			ts[i] = st[i];
 		}
 		return ts;
