@@ -147,19 +147,19 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		if (date == null) throw new IllegalArgumentException();
 		else {
-			Student []st = new Student[students.length];
+			Student []pt = new Student[students.length];
 			int count =0;
 			for(int i=0;i<students.length;i++)
 			if(students[i].getBirthDate().compareTo(date) == 0) {
-				st[count] = students[i];
+				pt[count] = students[i];
 				count++;
 			}
-			Student []ts = new Student[count];
+			Student []ss = new Student[count];
 
 			for(int i=0;i<count;i++) {
-				ts[i] = st[i];
+				ss[i] = pt[i];
 			}
-			return ts;
+			return ss;
 		}
 
 	}
@@ -184,13 +184,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
-		// Add your implementation here
-		Student st[] = new Student[students.length];
-		int count=0;
-		for(int i=0;i<students.length;i++) if(students[i].getBirthDate()getClass().getAge() == age) {
-			st[count] = students[i];
-			count++;
-		}
+
 		return null;
 	}
 
