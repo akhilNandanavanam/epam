@@ -99,10 +99,43 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void add(Student student, int index) {
 		// Add your implementation here
+		try{
+			if(index<0 || index>students.length){
+				throw new IllegalArgumentException();
+		}
+		else{
+
+		for(int i=0;i<students.length;i++)
+		{
+			students[i]=students[i+1];
+        }
+		this.students = new Student[index];
+		students[index]=student;
+		}
+		}
+			catch(Exception e)
+			{
+
+			}
 	}
 
 	@Override
 	public void remove(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
+		else{
+		for(int i=index;i<students.length;i++)
+		{
+			students[i]=students[i+1];
+		}
+		}
+		}
+			catch(Exception e)
+			{
+
+			}
 		// Add your implementation here
 	}
 
