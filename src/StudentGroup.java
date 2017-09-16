@@ -67,6 +67,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
         }
         catch(Exception e){
+            System.out.println(e);
         }
 	}
 
@@ -93,6 +94,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
         }
         catch(Exception e){
+            System.out.println(e);
         }
 	}
 
@@ -115,7 +117,7 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 			catch(Exception e)
 			{
-
+                System.out.println(e);
 			}
 	}
 
@@ -134,33 +136,113 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 			catch(Exception e)
 			{
-
+                System.out.println(e);
 			}
 		// Add your implementation here
 	}
 
 	@Override
 	public void remove(Student student) {
+
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
+		else{
+		for(int i=index+1;i<=students.length;i++)
+		{
+			students[i]=null;
+		}
+		}
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
+	    int i;
+	    try{
+			if(student==null){
+				throw new IllegalArgumentException();
+		}
+		else{
+		for(i=0;i<students.length;i++)
+		{
+			if(students[i]==student)
+				break;
+		}
+		for(int j=0;i<=students.length;i++)
+		{
+			students[i]=students[i+1];
+		}
+		}
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
+
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeToIndex(int index) {
+	    try{
+			if(index<0|| index>students.length){
+				throw new IllegalArgumentException();
+		}
+		else{
+		for(int i=0;i<=index;i++)
+		{
+			students[i]=students[index+1];
+
+		}
+		}
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeToElement(Student student) {
+	   int p=0;
+	    try{
+			if(student==null){
+				throw new IllegalArgumentException();
+		}
+		else{
+		for(int i=0;i<students.length;i++)
+		{
+			if(students[i]==student)
+			{
+				p=i;
+				break;
+			}
+
+		}
+		for(int i=0;i<p;i++)
+		{
+			students[i]=students[p+1];
+
+		}
+		}
+		}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 		// Add your implementation here
 	}
 
