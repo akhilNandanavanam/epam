@@ -49,7 +49,14 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
+        try
+        {
+            if(student==null)
+            {
+                throw new IllegalArgumentException();
+            }
 
+        else{
 	    this.students = new Student[0];
 	    for(int i=0;i<students.length;i++)
 		{
@@ -58,6 +65,11 @@ public class StudentGroup implements StudentArrayOperation {
 		}
 		students[0]=student;
 		}
+        }
+        catch(Exception e){
+        }
+	}
+
 
 		// Add your implementation here
 
